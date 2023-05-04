@@ -10,7 +10,7 @@ class DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(params[:doctor_params])
     if @doctor.save
-      render :json => @doctor
+      render json: @doctor
     else
       render :new
     end

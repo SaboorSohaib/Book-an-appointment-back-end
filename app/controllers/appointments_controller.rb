@@ -8,7 +8,7 @@ class AppointmentsController < ApplicationController
     @user = User.find_by_id(params[:user_id])
     @appointment = @user.appointments.new(appointment_params)
     if @appointment.save
-      render :json => @appointment
+      render json: @appointment
     else
       render :new
     end
