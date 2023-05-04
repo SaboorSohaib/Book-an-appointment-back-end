@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_04_132146) do
     t.string "city", limit: 50, null: false
     t.string "description", limit: 500, null: false
     t.string "image", null: false
-    t.string "department", limit: 50, null: false
+    t.string "speciality", limit: 30, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
