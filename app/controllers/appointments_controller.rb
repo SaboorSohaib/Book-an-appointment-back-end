@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
   def index
     @user = User.find_by_id(params[:user_id])
     @appointments = @user.appointments.all
+    render json: @appointments
   end
 
   def create
