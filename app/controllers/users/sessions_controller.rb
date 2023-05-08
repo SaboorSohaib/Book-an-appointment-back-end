@@ -1,11 +1,12 @@
 class Users::SessionsController < Devise::SessionsController
   include RackSessionFix
   respond_to :json
+
   private
 
   def respond_with(resource, _opts = {})
     render json: {
-      status: {code: 200, message: 'Logged in sucessfully.'},
+      status: { code: 200, message: 'Logged in sucessfully.' },
       data: UserSerializer.new(resource).serializable_hash[:data][:attributes]
     }, status: :ok
   end
@@ -14,7 +15,7 @@ class Users::SessionsController < Devise::SessionsController
     if current_user
       render json: {
         status: 200,
-        message: "logged out successfully"
+        message: 'logged out successfully'
       }, status: :ok
     else
       render json: {
@@ -23,29 +24,4 @@ class Users::SessionsController < Devise::SessionsController
       }, status: :unauthorized
     end
   end
-  # respond_to :json
-
-  # private
-
-  # def respond_with(_resource, _options = {})
-  #   render json: {
-  #     status: { code: 200, message: 'User signed in successfully', data: current_user }
-  #   }, status: :ok
-  # end
-
-  # def respond_to_on_destroy
-  #   jwt_payload = JWT.decode(request.headers['Authorization'].split[1], Rails.application.secret_key_base).first
-  #   current_user = User.find(jwt_payload['sub'])
-  #   if current_user
-  #     render json: {
-  #       status: 200,
-  #       message: 'Signed out successfully'
-  #     }, status: :ok
-  #   else
-  #     render json: {
-  #       status: 401,
-  #       message: 'User has no active session'
-  #     }, status: :unathorized
-  #   end
-  # end
 end
