@@ -28,6 +28,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   private
+
   def decode_jwt_token(token)
     JsonWebToken.decode(token)
   end
