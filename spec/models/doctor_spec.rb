@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Doctor, type: :model do
-  subject { Doctor.create!(name: 'abid', city: 'kabul', description: 'good doctor', image: 'image', speciality: 'dentist') }
+  subject do
+    Doctor.create!(name: 'abid', city: 'kabul', description: 'good doctor', image: 'image', speciality: 'dentist')
+  end
   before { subject.save }
 
   it 'should have a name' do

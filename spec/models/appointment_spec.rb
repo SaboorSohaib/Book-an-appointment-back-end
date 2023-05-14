@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Appointment, type: :model do
   before(:each) do
-    @user = User.create!(name: 'omar', email: 'omar@gmail.com', password:'121212')
-    @doctor = Doctor.create!(name: 'abid', city: 'kabul', description: 'good doctor', image: 'image', speciality: 'dentist')
-    @appointment = Appointment.create!(disease: 'cancer', city: 'NY', user_id: @user.id, doctor_id: @doctor.id, appointment_date: '2021-05-12',  appointment_time: '12:00')
+    @user = User.create!(name: 'omar', email: 'omar@gmail.com', password: '121212')
+    @doctor = Doctor.create!(name: 'abid', city: 'kabul', description: 'good doctor', image: 'image',
+                             speciality: 'dentist')
+    @appointment = Appointment.create!(disease: 'cancer', city: 'NY', user_id: @user.id, doctor_id: @doctor.id,
+                                       appointment_date: '2021-05-12', appointment_time: '12:00')
   end
 
   it 'should have a disease' do
