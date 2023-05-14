@@ -30,4 +30,19 @@ RSpec.describe Appointment, type: :model do
   it 'should have an appointment_time' do
     expect(@appointment.appointment_time).to eq(@appointment.appointment_time)
   end
+
+  it 'disease and city should be equl or grater than 3 characters and less than 50' do
+    expect(@appointment.disease.length).to be >= 3
+    expect(@appointment.city.length).to be >= 2
+    expect(@appointment.disease.length).to be <= 50
+    expect(@appointment.city.length).to be <= 50
+  end
+
+  it 'should belong to a user' do
+    expect(@appointment.user).to eq(@user)
+  end
+
+  it 'should belong to a doctor' do
+    expect(@appointment.doctor).to eq(@doctor)
+  end
 end
