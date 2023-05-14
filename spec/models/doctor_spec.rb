@@ -24,4 +24,18 @@ RSpec.describe Doctor, type: :model do
     expect(subject.speciality).to eq('dentist')
   end
 
+  it 'name, city, description and speciality should be equl or grater than 3 characters and less than 50' do
+    expect(subject.name.length).to be >= 3
+    expect(subject.city.length).to be >= 3
+    expect(subject.description.length).to be >= 3
+    expect(subject.speciality.length).to be >= 3
+    expect(subject.name.length).to be <= 50
+    expect(subject.city.length).to be <= 50
+    expect(subject.description.length).to be <= 50
+    expect(subject.speciality.length).to be <= 50
+  end
+
+  it 'should have many appointments' do
+    expect(subject.appointments).to eq([])
+  end
 end
