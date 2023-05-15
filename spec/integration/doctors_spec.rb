@@ -93,5 +93,19 @@ RSpec.describe 'doctors', type: :request do
       end
     end
 
+    delete('delete doctor') do
+      response(200, 'successful') do
+        let(:id) { '1' }
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
   end
 end
