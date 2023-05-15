@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/appointments/create":
+  "/users/{user_id}/appointments/create":
     post:
       summary: create appointments
       tags:
@@ -12,7 +12,7 @@ paths:
       responses:
         '200':
           description: successful
-  "/{user_id}/appointments/":
+  "/users/{user_id}/appointments/":
     parameters:
     - name: user_id
       in: path
@@ -27,7 +27,7 @@ paths:
       responses:
         '200':
           description: successful
-  "/{user_id}/apointments/{id}":
+  "/users/{user_id}/apointments/{id}":
     parameters:
     - name: user_id
       in: path
@@ -43,20 +43,6 @@ paths:
         type: string
     get:
       summary: show reservation
-      tags:
-      - api/appointments
-      responses:
-        '200':
-          description: successful
-    patch:
-      summary: update reservation
-      tags:
-      - api/appointments
-      responses:
-        '200':
-          description: successful
-    put:
-      summary: update reservation
       tags:
       - api/appointments
       responses:
@@ -153,20 +139,6 @@ paths:
       responses:
         '200':
           description: successful
-    patch:
-      summary: update doctor
-      tags:
-      - api/doctors
-      responses:
-        '200':
-          description: successful
-    put:
-      summary: update doctor
-      tags:
-      - api/doctors
-      responses:
-        '200':
-          description: successful
     delete:
       summary: delete doctor
       tags:
@@ -237,4 +209,4 @@ servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: 'https://appoint-doctor.onrender.com/ '
