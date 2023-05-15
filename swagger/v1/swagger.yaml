@@ -166,6 +166,65 @@ paths:
       responses:
         '200':
           description: successful
+  "/signup":
+    post:
+      summary: create user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete user
+      tags:
+      - api/users
+      responses:
+        '200':
+          description: successful
 servers:
 - url: https://{defaultHost}
   variables:
