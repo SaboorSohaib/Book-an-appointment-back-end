@@ -1,7 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'appointments', type: :request do
-  path '/appointments/create' do
+  path '/users/{user_id}/appointments/create' do
     post('create appointments') do
       tags 'api/appointments'
       response(200, 'successful') do
@@ -17,7 +17,7 @@ RSpec.describe 'appointments', type: :request do
     end
   end
 
-  path '/{user_id}/appointments/' do
+  path '/users/{user_id}/appointments/' do
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
 
     get('list reservations') do
@@ -37,7 +37,7 @@ RSpec.describe 'appointments', type: :request do
     end
   end
 
-  path '/{user_id}/apointments/{id}' do
+  path '/users/{user_id}/apointments/{id}' do
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
