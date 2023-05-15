@@ -20,8 +20,9 @@ class DoctorsController < ApplicationController
   end
 
   def destroy
-    @doctor = Doctor.find_by_id(params[:id])
-    @doctor.destroy
+      @doctor = Doctor.find_by_id(params[:id])
+      @doctor.appointments.destroy_all
+      @doctor.destroy
   end
 
   private
