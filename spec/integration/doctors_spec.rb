@@ -67,38 +67,6 @@ RSpec.describe 'doctors', type: :request do
       end
     end
 
-    patch('update doctor') do
-      tags 'api/doctors'
-      response(200, 'successful') do
-        let(:id) { '1' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-
-    put('update doctor') do
-      tags 'api/doctors'
-      response(200, 'successful') do
-        let(:id) { '1' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-
     delete('delete doctor') do
       tags 'api/doctors'
       response(200, 'successful') do
