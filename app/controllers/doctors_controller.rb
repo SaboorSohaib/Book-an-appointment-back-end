@@ -21,6 +21,7 @@ class DoctorsController < ApplicationController
 
   def destroy
     @doctor = Doctor.find_by_id(params[:id])
+    @doctor.appointments.destroy_all
     @doctor.destroy
   end
 
