@@ -27,7 +27,10 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
-
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:

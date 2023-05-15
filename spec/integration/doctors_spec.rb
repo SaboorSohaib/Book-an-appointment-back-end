@@ -2,7 +2,6 @@ require 'swagger_helper'
 
 RSpec.describe 'doctors', type: :request do
   path '/doctors/create' do
-
     post 'Create a doctor' do
       tags 'api/doctors'
       consumes 'application/json', 'application/xml'
@@ -13,13 +12,16 @@ RSpec.describe 'doctors', type: :request do
           city: { type: :string },
           image: { type: :string },
           description: { type: :string },
-          speciality: { type: :string },
+          speciality: { type: :string }
         },
-        required: [ 'name', 'city', 'image', 'description', 'speciality' ]
+        required: %w[name city image description speciality]
       }
 
       response '201', 'doctor created' do
-        let(:doctor) { { name: 'Dr.Ahmed', city: 'NYC',image: 'imagesdoctorsdoctor-1.jpg',description: 'RBSP', speciality: 'Dentist'   } }
+        let(:doctor) do
+          { name: 'Dr.Ahmed', city: 'NYC', image: 'imagesdoctorsdoctor-1.jpg', description: 'RBSP',
+            speciality: 'Dentist' }
+        end
         run_test!
       end
 
