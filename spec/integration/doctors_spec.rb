@@ -32,6 +32,7 @@ RSpec.describe 'doctors', type: :request do
 
   path '/doctors' do
     get('list doctors') do
+      tags 'api/doctors'
       response(200, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
@@ -49,6 +50,7 @@ RSpec.describe 'doctors', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show doctor') do
+      tags 'api/doctors'
       response(200, 'successful') do
         let(:id) { '1' }
 
@@ -64,6 +66,7 @@ RSpec.describe 'doctors', type: :request do
     end
 
     patch('update doctor') do
+      tags 'api/doctors'
       response(200, 'successful') do
         let(:id) { '1' }
 
@@ -79,6 +82,7 @@ RSpec.describe 'doctors', type: :request do
     end
 
     put('update doctor') do
+      tags 'api/doctors'
       response(200, 'successful') do
         let(:id) { '1' }
 
@@ -94,6 +98,7 @@ RSpec.describe 'doctors', type: :request do
     end
 
     delete('delete doctor') do
+      tags 'api/doctors'
       response(200, 'successful') do
         let(:id) { '1' }
 
