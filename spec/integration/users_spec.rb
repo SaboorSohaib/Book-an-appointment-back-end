@@ -47,5 +47,23 @@ RSpec.describe 'users', type: :request do
     end
   end
 
+  path '/users/{id}' do
+    parameter name: 'id', in: :path, type: :string, description: 'id'
+
+    get('show user') do
+      tags 'api/users'
+      response(200, 'successful') do
+        let(:id) { '1' }
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
 
 end
