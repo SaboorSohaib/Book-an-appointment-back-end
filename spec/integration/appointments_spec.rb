@@ -37,16 +37,16 @@ RSpec.describe 'appointments', type: :request do
     end
   end
 
-  path '/doctors/{doctor_id}/apointments/{id}' do
+  path '{user_id}/apointments/{id}' do
     # You'll want to customize the parameter types...
-    parameter name: 'doctor_id', in: :path, type: :string, description: 'doctor_id'
+    parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show reservation') do
       tags 'api/appointments'
       response(200, 'successful') do
-        let(:doctor_id) { '1' }
-        let(:id) { '123' }
+        let(:user_id) { '1' }
+        let(:id) { '1' }
 
         after do |example|
           example.metadata[:response][:content] = {

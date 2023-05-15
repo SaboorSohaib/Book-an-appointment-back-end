@@ -27,11 +27,11 @@ paths:
       responses:
         '200':
           description: successful
-  "/doctors/{doctor_id}/apointments/{id}":
+  "{user_id}/apointments/{id}":
     parameters:
-    - name: doctor_id
+    - name: user_id
       in: path
-      description: doctor_id
+      description: user_id
       required: true
       schema:
         type: string
