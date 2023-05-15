@@ -12,7 +12,7 @@ paths:
       responses:
         '200':
           description: successful
-  "{user_id}/appointments/":
+  "/{user_id}/appointments/":
     parameters:
     - name: user_id
       in: path
@@ -27,7 +27,7 @@ paths:
       responses:
         '200':
           description: successful
-  "{user_id}/apointments/{id}":
+  "/{user_id}/apointments/{id}":
     parameters:
     - name: user_id
       in: path
@@ -66,6 +66,14 @@ paths:
       summary: delete reservation
       tags:
       - api/appointments
+      responses:
+        '200':
+          description: successful
+  "/login":
+    post:
+      summary: login authentication
+      tags:
+      - api/authentication
       responses:
         '200':
           description: successful

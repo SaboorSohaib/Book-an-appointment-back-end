@@ -17,7 +17,7 @@ RSpec.describe 'appointments', type: :request do
     end
   end
 
-  path '{user_id}/appointments/' do
+  path '/{user_id}/appointments/' do
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
 
     get('list reservations') do
@@ -37,7 +37,7 @@ RSpec.describe 'appointments', type: :request do
     end
   end
 
-  path '{user_id}/apointments/{id}' do
+  path '/{user_id}/apointments/{id}' do
     # You'll want to customize the parameter types...
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
     parameter name: 'id', in: :path, type: :string, description: 'id'
