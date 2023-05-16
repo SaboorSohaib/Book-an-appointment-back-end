@@ -76,11 +76,11 @@ with the docotor, see all appiontmnets, delete a doctor(s).
 - Book an appointment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LIVE DEMO -->
-## 🚀 Live Demo <a name="live-demo"></a>
+### 🚀 Live Demo <a name="live-demo"></a>
 
 - [API on Render](https://appoint-doctor.onrender.com/)
-- Front-End Live Demo will be uploaded soon 
 
 ## Front-end repository link
 
@@ -203,7 +203,7 @@ If you like this project you can fork it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- We would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microvers</a> for giving us this opportunity to build this project.
+- We would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microverse</a> for giving us this opportunity to build this project.
 - Lets not forget that the <a href="https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign">
 design</a> of this project was made by <a href="https://www.behance.net/muratk">Murat Korkmaz</a> 
 
