@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-    <img src="../Book-an-Appointment/logo.svg">
+    <img src="./logo.png">
 </div>
 
 <div align="center">
@@ -14,17 +14,18 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 World Vision Clinic](#World-Vision-CLinic)
+- [📖 World Vision Clinic ](#-world-vision-clinic-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [Front-end repository link](#front-end-repository-link)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
+    - [Check Linter](#check-linter)
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
