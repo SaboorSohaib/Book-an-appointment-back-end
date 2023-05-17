@@ -114,36 +114,49 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
+```sh
+ mkdir my-folder
+ cd my-folder
+ git clone git@github.com:MudasirSherwani/Book-an-Appointment.git
+ cd Book-an-Appointment
 ```
- - mkdir my-folder
- - cd my-folder
- - git clone git@github.com:MudasirSherwani/Book-an-Appointment.git
- - cd Book-an-Appointment
  - Remove config/master.key and config/credentials.yml.enc if they exist.
- - Run in the terminal: EDITOR=code rails credentials:edit 
+ - Run in the terminal: 
+```sh
+ EDITOR=code rails credentials:edit 
+```
  - This command will create a new master.key and credentials.yml.enc if they do not exist.
- - bundle install
- - rails db:create
- - rails db:migrate
-
+```sh
+ bundle install
+```
+ - Change username and password in config/database.yml file
+ - Run these commands to create and migrate database schema
+```sh
+ rails db:create
+ rails db:migrate
 ```
 ### Usage
 
 To run the project, execute the following command:
-
-- rails server
+```sh
+rails server
+```
 
 ### Run tests
-
-- rspec ./spec/models/
+```sh
+rails db:migrate RAILS_ENV=test
+rspec ./spec/models/
+```
 
 ### Check Linter 
-
-- rubocop
+```sh
+rubocop
+```
 
 ### Deployment
 
-- Render
+- For deployement on render follow the instructions.
+[Getting Started with Ruby on Rails on Render](https://render.com/docs/deploy-rails#:~:text=On%20the%20Render%20Dashboard%2C%20go,key%20file.)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
