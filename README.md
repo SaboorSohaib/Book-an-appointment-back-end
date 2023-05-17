@@ -119,9 +119,12 @@ Clone this repository to your desired folder:
  - cd my-folder
  - git clone git@github.com:MudasirSherwani/Book-an-Appointment.git
  - cd Book-an-Appointment
+ - Remove config/master.key and config/credentials.yml.enc if they exist.
+ - Run in the terminal: EDITOR=code rails credentials:edit 
+ - This command will create a new master.key and credentials.yml.enc if they do not exist.
  - bundle install
- - db:create
- - db:migrate
+ - rails db:create
+ - rails db:migrate
 
 ```
 ### Usage
@@ -132,7 +135,7 @@ To run the project, execute the following command:
 
 ### Run tests
 
-- rspec
+- rspec ./spec/models/
 
 ### Check Linter 
 
